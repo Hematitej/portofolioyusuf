@@ -1,117 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yusuf Site's</title>
-  <link rel="stylesheet" href="personal.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Handlee&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arit.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Aritmatika</title>
 </head>
 <body>
-  <!--NAVIGATION BAR-->
   <header>
-    <nav>
-      <a href="#" class="nama">Muhammad Yusuf Shafwan</a>
-      <ul class="menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#learn">Learning Resources</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Mata Pelajaran
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Matematika</a></li>
-            <li><a class="dropdown-item" href="sunda.html">B. Sunda</a></li>
-            <li><a class="dropdown-item" href="karbon.html">PIPAS</a></li>
-            <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
-          </ul>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mtk.html">Kalkulator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kalkulator Baris & Deret</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
-  <!--NAVIGATION BAR END-->
+   </header>
 
-  <!--CONTENT-->
-  <main>
-    <article id="home">
-    <div class="text-container">
-      <h1>
-        Hi! I'm Muhammad Yusuf Shafwan. <br>
-        <span class="typing">I'm a Front-End Developer</span>
-      </h1>
-    </div>
-     <img src="Salinan_Foto_12410570_0096193156_Muhammad_Yusuf_Shafwan.jpg" alt="profile">
-  </article>
-  <hr>
-  <br><br><br><br><br>
-  <div class="bout">
-  <article id="about">
-   <h2><mark>About Me</mark></h2>
-   <p>Hello! My name is Muhammad Yusuf Shafwan. I'm a Front-End Developer</p>
-  </article>
-  </div>
-  <br><br><br>
-
-  <div id="belajar">
-    <article id="learn">
-     <div class="belajar1">
-      <h1>Learning Resources</h1>
-     </div>
-
-    <div id="list">
-      <div class="yt">
-       <h1>YOUTUBE</h1>
-       <div class="list1">
-       <ul>
-        <li><a href="https://www.youtube.com/@sandhikagalihWPU">Web Programming UNPAS</a></li>
-        <br>
-        <li><a href="https://www.youtube.com/@deaafrizal">Dea Afrizal </a></li>
-        <br>
-        <li><a href="https://www.youtube.com/@davidalfasunarna">David Alfa Sunama</a></li>
-       </ul>
-       </div>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">📐 Kalkulator Aritmatika & Geometri</h1>
+    
+        <div class="row g-4">
+          <!-- Kalkulator Aritmatika -->
+          <div class="col-md-6">
+            <div class="card p-4">
+              <h2 class="text-center mb-3">Barisan & Deret Aritmatika</h2>
+              <div class="mb-3">
+                <label for="a1" class="form-label">Suku Pertama (a)</label>
+                <input type="number" class="form-control" id="a1" placeholder="Masukkan a">
+              </div>
+              <div class="mb-3">
+                <label for="d" class="form-label">Selisih (d)</label>
+                <input type="number" class="form-control" id="d" placeholder="Masukkan d">
+              </div>
+              <div class="mb-3">
+                <label for="n1" class="form-label">Suku ke-n</label>
+                <input type="number" class="form-control" id="n1" placeholder="Masukkan n">
+              </div>
+              <button class="btn btn-primary w-100" onclick="hitungAritmatika()">Hitung</button>
+              <div class="result" id="hasilAritmatika"></div>
+            </div>
+          </div>
+    
+          <!-- Kalkulator Geometri -->
+          <div class="col-md-6">
+            <div class="card p-4">
+              <h2 class="text-center mb-3">Barisan & Deret Geometri</h2>
+              <div class="mb-3">
+                <label for="a2" class="form-label">Suku Pertama (a)</label>
+                <input type="number" class="form-control" id="a2" placeholder="Masukkan a">
+              </div>
+              <div class="mb-3">
+                <label for="r" class="form-label">Rasio (r)</label>
+                <input type="number" class="form-control" id="r" placeholder="Masukkan r">
+              </div>
+              <div class="mb-3">
+                <label for="n2" class="form-label">Suku ke-n</label>
+                <input type="number" class="form-control" id="n2" placeholder="Masukkan n">
+              </div>
+              <button class="btn btn-primary w-100" onclick="hitungGeometri()">Hitung</button>
+              <div class="result" id="hasilGeometri"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    </article>
-  </div>
-  <article id="contact">
-    <div class="container1">
-      <h1 class="Home1" id="home1">Silahkan Kontak Saya:</h1>
-      <form action="#" method="POST">
-          <label for="name"><strong>Nama:</strong></label>
-          <input type="text" id="name" name="name" required>
 
-          <label for="email"><strong>Email:</strong><label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message"><strong>Pesan:</strong></label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit"><b><strong>Kirim</strong></b></button>
-      </form>
-  </div>
-  </article>
-  </main>
-<!-- CONTENT END -->
-
-<!--FOOTER-->
-<footer>
-  <div class="footer">
-    <h5 style="color: #000000;"><strong>&#169 2025 Muhammad Yusuf Shafwan</strong></h5>
-  </div>
-</footer>
-<!--FOOTER END-->
-
-<script src="personal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
-</html>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="arit.js"></script>
 </body>
 </html>
