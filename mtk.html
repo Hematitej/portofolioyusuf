@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mtk.css">
+</head>
+<body>
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kalkulator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="arit.html">Kalkulator Baris & Deret</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   </header>
+   
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="display" class="form-control text-end" value="0" disabled>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="clearEntry()">CE</button>
+                <button class="btn btn-secondary" onclick="clearAll()">C</button>
+                <button class="btn btn-secondary" onclick="backspace()">⌫</button>
+                <button class="btn btn-warning" onclick="insertOperator('/')">÷</button>
+
+                <button class="btn btn-secondary" onclick="insertOperator('%')">%</button>
+                <button class="btn btn-secondary" onclick="square()">x²</button>
+                <button class="btn btn-secondary" onclick="squareRoot()">√x</button>
+                <button class="btn btn-warning" onclick="insertOperator('*')">×</button>
+
+                <button class="btn btn-light" onclick="insertNumber(7)">7</button>
+                <button class="btn btn-light" onclick="insertNumber(8)">8</button>
+                <button class="btn btn-light" onclick="insertNumber(9)">9</button>
+                <button class="btn btn-warning" onclick="insertOperator('-')">−</button>
+
+                <button class="btn btn-light" onclick="insertNumber(4)">4</button>
+                <button class="btn btn-light" onclick="insertNumber(5)">5</button>
+                <button class="btn btn-light" onclick="insertNumber(6)">6</button>
+                <button class="btn btn-warning" onclick="insertOperator('+')">+</button>
+
+                <button class="btn btn-light" onclick="insertNumber(1)">1</button>
+                <button class="btn btn-light" onclick="insertNumber(2)">2</button>
+                <button class="btn btn-light" onclick="insertNumber(3)">3</button>
+                <button class="btn btn-primary btn-lg" onclick="calculate()">=</button>
+
+                <button class="btn btn-light" onclick="toggleSign()">+/-</button>
+                <button class="btn btn-light" onclick="insertNumber(0)">0</button>
+                <button class="btn btn-light" onclick="insertDecimal()">,</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mtk.js"></script>
+</body>
+</html>

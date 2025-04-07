@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arit.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Aritmatika</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mtk.html">Kalkulator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kalkulator Baris & Deret</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   </header>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">📐 Kalkulator Aritmatika & Geometri</h1>
+    
+        <div class="row g-4">
+          <!-- Kalkulator Aritmatika -->
+          <div class="col-md-6">
+            <div class="card p-4">
+              <h2 class="text-center mb-3">Barisan & Deret Aritmatika</h2>
+              <div class="mb-3">
+                <label for="a1" class="form-label">Suku Pertama (a)</label>
+                <input type="number" class="form-control" id="a1" placeholder="Masukkan a">
+              </div>
+              <div class="mb-3">
+                <label for="d" class="form-label">Selisih (d)</label>
+                <input type="number" class="form-control" id="d" placeholder="Masukkan d">
+              </div>
+              <div class="mb-3">
+                <label for="n1" class="form-label">Suku ke-n</label>
+                <input type="number" class="form-control" id="n1" placeholder="Masukkan n">
+              </div>
+              <button class="btn btn-primary w-100" onclick="hitungAritmatika()">Hitung</button>
+              <div class="result" id="hasilAritmatika"></div>
+            </div>
+          </div>
+    
+          <!-- Kalkulator Geometri -->
+          <div class="col-md-6">
+            <div class="card p-4">
+              <h2 class="text-center mb-3">Barisan & Deret Geometri</h2>
+              <div class="mb-3">
+                <label for="a2" class="form-label">Suku Pertama (a)</label>
+                <input type="number" class="form-control" id="a2" placeholder="Masukkan a">
+              </div>
+              <div class="mb-3">
+                <label for="r" class="form-label">Rasio (r)</label>
+                <input type="number" class="form-control" id="r" placeholder="Masukkan r">
+              </div>
+              <div class="mb-3">
+                <label for="n2" class="form-label">Suku ke-n</label>
+                <input type="number" class="form-control" id="n2" placeholder="Masukkan n">
+              </div>
+              <button class="btn btn-primary w-100" onclick="hitungGeometri()">Hitung</button>
+              <div class="result" id="hasilGeometri"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="arit.js"></script>
+</body>
+</html>
