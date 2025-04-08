@@ -1,5 +1,22 @@
 body {
     background-color: #1a1a1a;
+    color: white;
+}
+
+.navbar {
+    background-color: #545454;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+  
+}
+.navbar-brand, .nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+  
+nav #menu a:hover,
+  .nav-link.active {
+    color: white !important;
 }
 
 .calculator {
@@ -52,3 +69,12 @@ button {
     background-color: #666;
     color: white;
 }
+
+/* FOOTER */
+footer {
+    padding: 1em;
+    text-align: center;
+    background-color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+  }
