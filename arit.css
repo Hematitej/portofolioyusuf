@@ -1,27 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
     background-color: #000;
     color: #fff;
   }
-  .card {
+
+  .container {
+    flex: 1;
+  }
+
+.navbar {
+    background-color: #545454;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+}
+.navbar-brand, .nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+  
+nav #menu a:hover,
+  .nav-link.active {
+    color: white !important;
+}
+
+.card {
     background-color: #1a1a1a;
     border-radius: 15px;
-  }
-  .form-control, .form-select {
+}
+.form-control, .form-select {
     background-color: #333;
     color: #fff;
     border: none;
-  }
-  .form-control::placeholder {
+}
+.form-control::placeholder {
     color: #aaa;
-  }
-  .btn-primary {
+}
+.btn-primary {
     background-color: #007bff;
     border: none;
-  }
-  .btn-primary:hover {
+}
+.btn-primary:hover {
     background-color: #0056b3;
-  }
-  .result {
+}
+.result {
     font-weight: bold;
     margin-top: 10px;
-  }
+}
+
+/* FOOTER */
+footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
